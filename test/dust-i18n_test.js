@@ -1,41 +1,48 @@
 'use strict';
-var dust = require('dustjs-linkedin');
-require('../lib/dust-i18n.js');
-
-/*
-  ======== A Handy Little Nodeunit Reference ========
-  https://github.com/caolan/nodeunit
-
-  Test methods:
-    test.expect(numAssertions)
-    test.done()
-  Test assertions:
-    test.ok(value, [message])
-    test.equal(actual, expected, [message])
-    test.notEqual(actual, expected, [message])
-    test.deepEqual(actual, expected, [message])
-    test.notDeepEqual(actual, expected, [message])
-    test.strictEqual(actual, expected, [message])
-    test.notStrictEqual(actual, expected, [message])
-    test.throws(block, [error], [message])
-    test.doesNotThrow(block, [error], [message])
-    test.ifError(value)
-*/
+var dust;
 
 exports['dust i18n helper'] = {
+
   setUp: function(done) {
-    // setup here
+    dust = require('dustjs-linkedin');
+    require('../lib/dust-i18n.js');
+
     done();
   },
-  'hello world': function(test) {
+
+  'it should throw exception if selected language is not setted': function(test) {
+    test.expect(1);
+    
+    test.throws(function(){
+      dust.i18n.setLanguage('es_ES');
+    }, "language 'es_ES' not available!");
+
+    test.done();
+  },
+
+  'it should not throw exception if selected language is setted': function(test) {
+    test.expect(1);
+
+    dust.i18n.setLanguages(['es_ES']);
+    
+    test.doesNotThrow(function() {
+      dust.i18n.setLanguage(['es_ES']);
+    });
+
+    test.done();
+  }  
+
+  /*
+  'it should throw exception if language is not setted': function(test) {
     test.expect(1);
     // tests here
-    var compiled = dust.compile("Hello {name}!", "hello world");
+    var compiled = dust.compile('{@i18n key="hello_world"/}', 'hello_world');
     dust.loadSource(compiled);
 
-    dust.render("hello world", {name:'world'}, function(err, out) {
+    dust.render('hello_world', {}, function(err, out) {
       test.equal(out, 'Hello world!', 'should be Hello world!');
       test.done();
     });
   }
+  */
 };
