@@ -1,0 +1,40 @@
+{
+  "name": "dust-i18n",
+  "description": "DustJS i18n helper",
+  "version": "0.0.1",
+  "homepage": "https://bitbucket.org/manolakis/dust-i18n/wiki/Home",
+  "author": {
+    "name": "Manuel Martin",
+    "email": "manuel.martin@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/manolakis/dust-i18n.git"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/manolakis/dust-i18n/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://bitbucket.org/manolakis/dust-i18n/wiki/Home/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/dust-i18n",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt": "~0.4.1",
+    "dustjs-linkedin": "~2.0.3"
+  },
+  "keywords": []
+}
