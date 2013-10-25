@@ -6,7 +6,8 @@
         var compiled = dust.compile(template, name);
         dust.loadSource(compiled);
       };
-  
+
+  require('dustjs-helpers');
   require('../lib/dust-i18n.js');
 
   exports['dust i18n helper'] = {
@@ -68,6 +69,36 @@
       });
 
       compile('{@i18n key="test.hello_world"/}', 'hello_world');
+      dust.render('hello_world', {}, function(err, out) {
+        test.equal(out, '', 'should be \'\'');
+        test.done();
+      });
+    },
+
+    'it should resolve keys from context': function(test) {
+      test.expect(1);
+
+      dust.i18n.setLanguages(['es_ES']);
+      dust.i18n.add('es_ES', {
+        'test.hello_world' : '¡Hola mundo!'
+      });
+
+      compile('{@i18n key="{key}"/}', 'hello_world');
+      dust.render('hello_world', {key: "test.hello_world"}, function(err, out) {
+        test.equal(out, '¡Hola mundo!', 'should be \'¡Hola mundo!\'');
+        test.done();
+      });
+    },
+
+    'it should return \'\' if key is not provided': function(test) {
+      test.expect(1);
+
+      dust.i18n.setLanguages(['es_ES']);
+      dust.i18n.add('es_ES', {
+        'test.hello_world' : '¡Hola mundo!'
+      });
+
+      compile('{@i18n /}', 'hello_world');
       dust.render('hello_world', {}, function(err, out) {
         test.equal(out, '', 'should be \'\'');
         test.done();

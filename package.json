@@ -34,7 +34,8 @@
     "grunt-contrib-nodeunit": "~0.2.0",
     "grunt-contrib-watch": "~0.4.0",
     "grunt": "~0.4.1",
-    "dustjs-linkedin": "~2.0.3"
+    "dustjs-linkedin": "~2.0.3",
+    "dustjs-helpers": "~1.1.1"
   },
   "keywords": []
 }
