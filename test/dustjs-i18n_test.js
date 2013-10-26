@@ -8,7 +8,7 @@
       };
 
   require('dustjs-helpers');
-  require('../lib/dust-i18n.js');
+  require('../lib/dustjs-i18n.js');
 
   exports['dust i18n helper'] = {
 

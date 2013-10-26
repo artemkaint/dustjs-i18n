@@ -1,26 +1,26 @@
 {
-  "name": "dust-i18n",
+  "name": "dustjs-i18n",
   "description": "DustJS i18n helper",
   "version": "0.0.1",
-  "homepage": "https://bitbucket.org/manolakis/dust-i18n",
+  "homepage": "https://bitbucket.org/manolakis/dustjs-i18n",
   "author": {
     "name": "Manuel Martin",
     "email": "manuel.martin@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/manolakis/dust-i18n.git"
+    "url": "https://bitbucket.org/manolakis/dustjs-i18n.git"
   },
   "bugs": {
-    "url": "https://bitbucket.org/manolakis/dust-i18n/issues"
+    "url": "https://bitbucket.org/manolakis/dustjs-i18n/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://bitbucket.org/manolakis/dust-i18n/wiki/Home/blob/master/LICENSE-MIT"
+      "url": "https://bitbucket.org/manolakis/dustjs-i18n/raw/cbc634bdae9baa41ea10d32d6d446e8e3b6c5b4f/LICENSE-MIT"
     }
   ],
-  "main": "lib/dust-i18n",
+  "main": "lib/dustjs-i18n",
   "engines": {
     "node": ">= 0.6.0"
   },
