@@ -1,7 +1,7 @@
 /*! dustjs-i18n - v0.0.1 - 2013-10-28
 * https://bitbucket.org/manolakis/dustjs-i18n
 * Copyright (c) 2013 Manuel Martin; Licensed MIT */
-(function(dust, Showdown) {
+(function(dust) {
 	'use strict';
 
 		/* Utility functions */
@@ -122,5 +122,4 @@
 	};
 
 	/* We are writing to the `dust` object so we don't need to return anything */
-})(typeof exports === 'object' ? require('dustjs-linkedin') : dust,
-	typeof exports === 'object' ? require('showdown') : Showdown);
+})(typeof exports === 'object' ? require('dustjs-linkedin') : dust);
