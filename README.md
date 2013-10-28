@@ -106,4 +106,4 @@ You can chain several filters
 	
 Filters will be executed in the order stablished inside `$key`.
 
-[1]: ./src/master/lib/dustjs-i18n-showdown.js
+[1]: https://bitbucket.org/manolakis/dustjs-i18n/src/master/lib/dustjs-i18n-showdown.js
