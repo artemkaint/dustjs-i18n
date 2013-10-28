@@ -21,6 +21,10 @@ module.exports = function(grunt) {
         src: ['lib/<%= pkg.name %>.js'],
         dest: 'dist/<%= pkg.name %>.js'
       },
+      showdown: {
+        src: ['lib/<%= pkg.name %>-showdown.js'],
+        dest: 'dist/<%= pkg.name %>-showdown.js'
+      },
     },
     uglify: {
       options: {
@@ -29,6 +33,10 @@ module.exports = function(grunt) {
       dist: {
         src: '<%= concat.dist.dest %>',
         dest: 'dist/<%= pkg.name %>.min.js'
+      },
+      showdown: {
+        src: '<%= concat.showdown.dest %>',
+        dest: 'dist/<%= pkg.name %>-showdown.min.js'
       },
     },
     nodeunit: {

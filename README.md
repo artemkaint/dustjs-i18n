@@ -82,3 +82,28 @@ will produce
 
 	hola Spiderman
 
+## Filters
+
+**Dustjs-i18n** allows to use filters to modify or process the produced output. You can see [dustjs-i18n-showdown.js][1] as a provided example.
+
+### Installation
+
+**dustjs-i18n** provides the method `dust.i18n.addFilter(name, filterBody)` where `filterBody` receives text parameter and should return the filtered text.
+
+*example*
+
+	dust.i18n.addFilter('u', function(text){
+		return text.toUpperCase();
+	});
+
+### Usage
+
+	{@i18n $key="name|u" /}
+	
+You can chain several filters
+
+	{@i18n $key="name|u|m|s" /}
+	
+Filters will be executed in the order stablished inside `$key`.
+
+[1]: ./lib/dustjs-i18n-showdown.js
