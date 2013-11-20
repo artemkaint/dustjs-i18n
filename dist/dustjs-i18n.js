@@ -1,4 +1,4 @@
-/*! dustjs-i18n - v0.0.1 - 2013-10-28
+/*! dustjs-i18n - v0.0.2 - 2013-11-20
 * https://bitbucket.org/manolakis/dustjs-i18n
 * Copyright (c) 2013 Manuel Martin; Licensed MIT */
 (function(dust) {
