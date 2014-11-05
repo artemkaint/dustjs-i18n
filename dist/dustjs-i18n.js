@@ -83,7 +83,7 @@
 	};
 
 	dust.helpers.i18n = function(chunk, context, bodies, params){
-		if (params && typeof params.$key !== undefined) {
+		if (params && params.$key !== undefined) {
 			var selected = i18nContext.selected,
 				languageItems = i18nLanguages[selected],
 				pattern = /\{(\s*[\w]+\s*)\}/g,
@@ -92,7 +92,13 @@
 
 			
 			$key = dust.helpers.tap(params.$key, chunk, context).split('|');
-			$data = languageItems[dust.helpers.tap($key.shift(), chunk, context)];
+            var keyName = dust.helpers.tap($key.shift(), chunk, context);
+            if (languageItems !== undefined &&  languageItems[keyName] !== undefined) {
+                $data = languageItems[keyName];
+            }
+            else {
+                $data = null;
+            }
 
 			while ((paramsArray = pattern.exec($data)) !== null) {
 				paramName = paramsArray[1].trim();
