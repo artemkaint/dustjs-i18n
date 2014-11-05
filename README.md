@@ -108,5 +108,3 @@ Filters will be executed in the order stablished inside `$key`.
 
 [1]: https://bitbucket.org/manolakis/dustjs-i18n/src/master/lib/dustjs-i18n-showdown.js
 =======
-dustjs-i18n
-===========
