@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # DustJS - i18n
 
-**Dustjs-i18n** is a Helper to provide i18n inside DustJS templates.
+**Dustjs-i18n** is a Helper to provide i18n inside DustJS templates. Forked from https://bitbucket.org/manolakis/dustjs-i18n
 
 ## Basic usage
 
@@ -111,6 +110,3 @@ Filters will be executed in the order stablished inside `$key`.
 =======
 dustjs-i18n
 ===========
-
-Helper to provide i18n inside DustJS templates.
->>>>>>> 390a06d4a52cdeac850c623875d19afbe78f3811
